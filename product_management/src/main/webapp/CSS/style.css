@@ -5,7 +5,8 @@
 
 .btr{
 	color: white;
-	background-color: blue;
+	background-color: black;
+	background: black;
 	padding-top: 5px 15px;
 	border-radius: 5px;
 	text-decoration: none;
@@ -16,9 +17,10 @@
 }
 .table{
 	margin: auto;
-	margin-top: 20px;
+	margin-top: 100px;
 	font-size: 22px;
 	border:none
+	
 }
 .textbox{
 	font-size: 18px;
@@ -26,7 +28,7 @@
 }
 .button{
 	color: white;
-	background-color: blue;
+	background-color: black;
 	padding-top: 5px 15px;
 	border-radius: 5px;
 	font-size: 18px;
@@ -35,7 +37,19 @@
 .tabledata{
 	padding: 10px;
 }
-.spanid{
+#spanid{
 	font-size: 10px;
-	color: red;
+	color: teal;
+}
+.tar{
+	width: 60%;
+	border-collapse: collapse;
+	font-size: 20px;
+}
+.tar tr th,.tar tr td{
+	padding: 10px;
+}
+.tar tr:hover{
+	background-color: lightgray;
+	color: white;
 }
