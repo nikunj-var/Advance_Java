@@ -1,0 +1,27 @@
+<%@ include file = "navbar.jsp"%>
+<html>
+	<body>
+		<table class='table'>
+			<tr >
+				<td class='tabledata'>Enter product id</td>
+				<td class='tabledata'><input type="text" class="textbox" name="pid" required></td>
+			</tr>
+			<tr >
+				<td class='tabledata'>Enter product id</td>
+				<td class='tabledata'><input type="text" class="textbox" name="pid" required></td>
+			</tr>
+			<tr >
+				<td class='tabledata'>Enter product id</td>
+				<td class='tabledata'><input type="text" class="textbox" name="pid" required></td>
+			</tr>
+			<tr >
+				<td class='tabledata'>Enter product id</td>
+				<td class='tabledata'><input type="text" class="textbox" name="pid" required></td>
+			</tr>
+			<tr >
+				<td class='tabledata'>Enter product id</td>
+				<td class='tabledata'><input type="text" class="textbox" name="pid" required></td>
+			</tr>
+		</table>
+	</body>
+</html>

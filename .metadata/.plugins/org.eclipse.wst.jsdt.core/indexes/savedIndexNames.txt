@@ -1,0 +1,13 @@
+INDEX VERSION 1.4+/Users/kanahaiya/webdev-html/.metadata/.plugins/org.eclipse.wst.jsdt.core/indexes
+979137431.index
+3359798667.index
+1075915932.index
+1248802399.index
+2946766110.index
+387364844.index
+3292059272.index
+160683137.index
+3063108391.index
+4106418631.index
+454336257.index
+376338448.index

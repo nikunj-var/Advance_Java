@@ -1,0 +1,5 @@
+<%
+String uid = req.getParameter("userid");
+String password = req.getParameter("password");
+String username = req.getParameter("username");
+%>

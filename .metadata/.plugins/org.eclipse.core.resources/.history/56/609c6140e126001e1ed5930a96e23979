@@ -1,0 +1,34 @@
+<%@include file = "connection.jsp"%>
+<%@include file = "navbar.jsp"%>
+<html>
+<body>
+	<%
+		/* get details from user */
+		String pid = request.getParameter("id");
+		String pname = request.getParameter("name");
+		String pbrand = request.getParameter("brand");
+		String pquantity = request.getParameter("quantity");
+		String pprice = request.getParameter("price");
+		
+		String query = "insert into product_info values(?,?,?,?,?)";
+		
+		/* make prepare statement */
+		PreparedStatement ps = cn.prepareStatement(query);
+		
+		/* add data inside statement */
+		ps.setString(1,pid);
+		ps.setString(2,pname);
+		ps.setString(3,pbrand);
+		ps.setString(4,pquantity);
+		ps.setString(5,pprice);
+		
+		/* update records */
+		ps.executeUpdate();
+		%>
+	<!-- give msg to user  --> 
+		
+	<div class="div">
+		<h1>Product record has been saved</h1>
+	</div>
+</body>
+</html>

@@ -1,0 +1,12 @@
+package temp;
+
+public class test {
+
+	public static void main(String[] args) {
+		try{
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			Connection cn = DriverManager.getConnection("jdbc:mysql://localhost/jsp12","root","Nikunj@123");
+			
+		}
+	}
+}

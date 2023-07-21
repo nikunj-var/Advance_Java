@@ -1,0 +1,25 @@
+<%@include file = "connection.jsp"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<%
+		String pid = request.getParameter("id");
+		String pname = request.getParameter("name");
+		String pbrand = request.getParameter("brand");
+		String pquantity = request.getParameter("quantity");
+		String pprice = request.getParameter("price");
+		String query = "insert into product_info values(?,?,?,?))";
+		PreparedStatement ps = cn.prepareStatement(query);
+		ps.setString(1,pid);
+		ps.setString(2,pname);
+		ps.setString(3,pbrand);
+		ps.setString(4,pquantity);
+		ps.setString(5,pprice);
+		ps.executeUpdate();
+	%>
+</body>
+</html>

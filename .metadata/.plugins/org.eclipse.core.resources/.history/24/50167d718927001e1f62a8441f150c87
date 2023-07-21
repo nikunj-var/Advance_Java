@@ -1,0 +1,8 @@
+function makeActive(){
+	
+	var an = document.getElementById("home")
+	
+	an.style.backgroundColor = "red";
+	
+	
+}

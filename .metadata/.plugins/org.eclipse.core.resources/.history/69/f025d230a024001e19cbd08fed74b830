@@ -1,0 +1,10 @@
+.div{
+	text-align: center;
+	margin-top: 50px;
+}
+
+.btr{
+	color: white;
+	background-color: blue;
+	padding-top: ;
+}

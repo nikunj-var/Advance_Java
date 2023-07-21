@@ -1,0 +1,5 @@
+package servlet_interface;
+
+public class DemoServlet {
+
+}

@@ -1,0 +1,6 @@
+<html>
+<body>
+<% String name = "Nikunj Varshney"; %>
+<h2 > Hello<%=name %></h2>
+</body>
+</html>

@@ -1,0 +1,14 @@
+<%@page import = "java.sql.*,java.util.*" %>
+
+<%
+String uid = req.getParameter("userid");
+String password = req.getParameter("password");
+String username = req.getParameter("username");
+Class.forName("com.mysql.cj.jdbc.Driver");
+Connection cn = DriverManager.getConnection("jdbc:mysql://localhost/servlet12","root","Nikunj@123");
+String query = "insert into user_info values(?,?,?)";
+PreparedStatement ps = cn.prepareStatement(query);
+ps.setString(1,uid);
+ps.setString(2, password);
+ps.setString(3, username);
+%>

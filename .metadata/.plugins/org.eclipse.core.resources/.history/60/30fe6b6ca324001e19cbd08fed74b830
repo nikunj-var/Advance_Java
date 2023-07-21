@@ -1,0 +1,8 @@
+<%@ include file = "navbar.jsp"%>
+<html>
+	<body>
+		<div class='div'>
+			<h1>This page is under construction</h1>
+		</div>
+	</body>
+</html>

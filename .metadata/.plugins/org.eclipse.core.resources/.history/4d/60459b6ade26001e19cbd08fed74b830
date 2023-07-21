@@ -1,0 +1,43 @@
+<%@ include file = "navbar.jsp"%>
+<html>
+	<body>
+	<form action = 'save-record.jsp' method = "post">
+	</form>
+		<table class='table'>
+			<tr >
+				<td class='tabledata'>Enter product id</td>
+				<td class='tabledata'><input type="text" class="textbox" name="id" required></td>
+			</tr>
+			<tr >
+				<td class='tabledata'>Enter product name</td>
+				<td class='tabledata'><input type="text" class="textbox" name="name" required></td>
+			</tr>
+			<tr >
+				<td class='tabledata'>Enter product brand</td>
+				<td class='tabledata'>
+					<select class='textbox' name='brand'>
+						<option>Logitech</option>
+						<option>Dell</option>
+						<option>Apple</option>
+						<option>Samsung</option>
+						<option>Micromax</option>
+						<option>Mi</option>
+					</select>
+				</td>
+			</tr>
+			<tr >
+				<td class='tabledata'>Enter product quantity</td>
+				<td class='tabledata'><input type="text" class="textbox" name="quantity" required></td>
+			</tr>
+			<tr >
+				<td class='tabledata'>Enter product price</td>
+				<td class='tabledata'><input type="text" class="textbox" name="price" required></td>
+			</tr>
+			<tr>
+				<td colspan = '2' align='right'>
+					<button class='button'>Submit</button>
+				</td>
+			</tr>
+		</table>
+	</body>
+</html>

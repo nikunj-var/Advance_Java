@@ -1,0 +1,11 @@
+<%@ include file = "navbar.jsp"%>
+<html>
+	<body>
+		<table class='table'>
+			<tr>
+				<td>Enter product id</td>
+				<td><input type="text" class="textbox" name="pid" required></td>
+			</tr>
+		</table>
+	</body>
+</html>
