@@ -23,6 +23,12 @@
 		<jsp:include page="login.jsp"/>
 		<% 
 	}
+	else{
+		%>
+		<h2>User does not exists! Try again.</h2>
+		<jsp:include page="login.jsp"/>
+		<% 
+	}
 %>
 </body>
 </html>
