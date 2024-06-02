@@ -1,8 +1,0 @@
-<%@ include file = "navbar.jsp"%>
-<html>
-	<body>
-		<div class='div'>
-			<h1>Welcome to Product Management System</h1>
-		</div>
-	</body>
-</html>

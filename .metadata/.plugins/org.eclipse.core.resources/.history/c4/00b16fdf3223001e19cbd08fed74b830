@@ -1,7 +1,0 @@
-package servlet_demo;
-
-import jakarta.servlet.http.HttpServlet;
-
-public class helloservlet extends HttpServlet{
-	pub
-}
