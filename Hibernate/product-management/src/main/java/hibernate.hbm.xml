@@ -1,0 +1,12 @@
+
+ 
+<hibernate-mapping> 
+  <class name="com.cetpa.product.entities.Product" >
+   <id name="pId" >
+    <generator class="assigned" />
+   </id>
+   <property name="pName"  />
+   <property name="quantity" />
+   <property name="price"/>
+  </class>	   
+</hibernate-mapping>  
