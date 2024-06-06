@@ -4,6 +4,7 @@ import javax.persistence.Entity;
 import javax.persistence.*;
 
 @Entity
+@Table(name="personInfo")
 public class Person {
 	@Id
 	private int pid;
