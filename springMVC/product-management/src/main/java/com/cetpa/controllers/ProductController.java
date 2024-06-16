@@ -29,7 +29,7 @@ public class ProductController {
 	
 	@RequestMapping("save-record")
 	public String saveProductRecord(Product product) {
-		System.out.println("save record called controller");
+		
 		productService.addProduct(product);
 		return "save-record.jsp";
 	}
@@ -37,8 +37,34 @@ public class ProductController {
 	@RequestMapping("show-list")
 	public String getProductRecord(Model model) {
 		List<Product> productList = productService.getList();
-		System.out.println(productList);
 		model.addAttribute("list",productList);
 		return "show-list.jsp";
+	}
+	
+	@RequestMapping("search")
+	public String getSearchView() {
+		return "search.jsp";
+	}
+	
+	@RequestMapping("search-record")
+	public String getRecord(int id,Model model){
+		Product product = productService.getProduct(id);
+		if(product == null) {
+			model.addAttribute("msg","Product not exist");
+			return "search.jsp";
+		}
+		model.addAttribute("product",product);
+		return "search-record.jsp";
+	}
+	
+	@RequestMapping("delete-record")
+	public String getDeleteView() {
+		return "delete-record.jsp";	
+	}
+	@RequestMapping("delete")
+	public String Recorddeleted(int id)
+	{	
+		productService.deleterecord(id);
+		return "delete.jsp";
 	}
 }

@@ -1,7 +1,7 @@
 <%@ include file = "navbar.jsp"%>
 <html>
 	<body onload = makeActive("edit")>
-	<form action = "edit2.jsp" method = "post">
+	<form action = "edit2" method = "post">
 		<table class='table'>
 			<tr >
 				<td class='tabledata'>Enter product id</td>

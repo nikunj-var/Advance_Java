@@ -1,10 +1,9 @@
 <%@ include file = "navbar.jsp"%>
 
-<%@include file = "connection.jsp"%>
 
 <html>
-	<body onload = makeActive("search")>
-	<form action = "search-record.jsp" method = "post">
+	<body>
+	<form action = "search-record" method = "post">
 		<table class='table'>
 			<tr >
 				<td class='tabledata'>Enter product id</td>
@@ -16,10 +15,13 @@
 			
 			<tr>
 				<td colspan = '2' align='right'>
-					<button class='button'" type="submit">Search</button>
+					<button class='button'>Search</button>
 				</td>
 			</tr>
 		</table>
+		<div class="div">
+		<h2>${msg}</h2>
+		</div>
 	</form>
 		
 	</body>

@@ -26,4 +26,17 @@ public class ProductRepository {
 		
 	}
 
+	public Product getProduct(int id) {
+		for(Product p : productList) {
+			if(p.getId() == id) {
+				return p;
+			}
+		}
+		return null;
+	}
+
+	public void deleteRecord(Product product) {
+		productList.remove(product);
+	}
+
 }

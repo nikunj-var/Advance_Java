@@ -3,6 +3,14 @@
 <html>
 <body  onload = makeActive("list")>
 
+<!-- Presentation Logic -->
+<c:if test="${list == '[]' }">
+	<div>
+	<h1> No record found!</h1>
+	</div>
+	
+</c:if>
+<c:if test="${list != '[]' }">
 	<div class="div">
 		<h1>Product Details</h1>
 	</div>
@@ -13,7 +21,7 @@
 			<th>Brand</th>
 			<th>Quantity</th>
 			<th>Price</th>
-			<th style="color:grey;">Action</th>
+			
 		</tr>
 	<c:forEach var="product" items="${list}">
 		<tr>
@@ -25,6 +33,6 @@
 		</tr>
 	</c:forEach>
 	</table>
-	
+	</c:if>
 </body>
 </html>

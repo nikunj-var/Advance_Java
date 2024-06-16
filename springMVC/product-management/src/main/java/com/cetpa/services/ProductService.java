@@ -23,5 +23,15 @@ public class ProductService {
 	public List<Product> getList() {
 		return productRepository.getList();
 	}
+
+	public Product getProduct(int id) {
+		return productRepository.getProduct(id);
+	}
+
+	public void deleterecord(int id) {
+		Product product = productRepository.getProduct(id);
+		productRepository.deleteRecord(product);
+		
+	}
 	
 }
