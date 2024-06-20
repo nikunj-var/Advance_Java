@@ -5,10 +5,9 @@ import java.util.ArrayList;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
+import org.hibernate.query.Query;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
-import org.springframework.orm.hibernate5.LocalSessionFactoryBean;
-import org.springframework.jdbc.datasource.DriverManagerDataSource;
 import com.cetpa.models.Product;
 
 // it uses connection and holds data
@@ -17,7 +16,7 @@ public class ProductRepository {
 
 	private Session session;
 	private Transaction transaction;
-	 DriverManagerDataSource
+	 
 	
 	@Autowired
 	public ProductRepository(SessionFactory sessionFactory) {
@@ -26,27 +25,24 @@ public class ProductRepository {
 	}
 
 	 public void saveProduct(Product product) {
-		 System.out.println("product"+product);
-//		productList.add(product);	
-		System.out.println("product added");
+		 transaction.begin();
+		session.save(product);
+		transaction.commit();
 	}
 
 	public ArrayList<Product> getList() {
-//		return productList;
-		
+		Query<Product> query = session.createQuery("from Product",Product.class);
+		return (ArrayList<Product>)query.list();
 	}
 
 	public Product getProduct(int id) {
-//		for(Product p : productList) {
-//			if(p.getId() == id) {
-//				return p;
-//			}
-//		}
-//		return null;
+		return session.get(Product.class, id);
 	}
 
 	public void deleteRecord(Product product) {
-//		productList.remove(product);
+		 transaction.begin();
+		session.delete(product);
+		transaction.commit();
 	}
 
 }
