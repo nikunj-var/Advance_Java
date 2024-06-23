@@ -10,8 +10,10 @@ import com.cetpa.repositories.ProductRepository;
 
 @Service
 public class ProductService {
-	
-	
+
+	public ProductService() {
+		
+	}
 	@Autowired
 	private ProductRepository productRepository;
 	 

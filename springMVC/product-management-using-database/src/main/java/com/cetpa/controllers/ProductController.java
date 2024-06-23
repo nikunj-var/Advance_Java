@@ -24,6 +24,7 @@ public class ProductController {
 	
 	@RequestMapping("insert")
 	public String getInsertView() {
+		System.out.println("i am called");
 		return "insert.jsp";
 	}
 	

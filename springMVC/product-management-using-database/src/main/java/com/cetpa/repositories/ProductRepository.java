@@ -16,7 +16,9 @@ public class ProductRepository {
 
 	private Session session;
 	private Transaction transaction;
-	 
+	public ProductRepository() {
+		
+	}
 	
 	@Autowired
 	public ProductRepository(SessionFactory sessionFactory) {
