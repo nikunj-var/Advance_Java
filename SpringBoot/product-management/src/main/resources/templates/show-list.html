@@ -1,0 +1,28 @@
+
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+			<link th:href="@{/CSS/style.css}" rel="stylesheet">	</head>
+<body >
+<div th:insert="menu.html"></div>
+	<div class="div">
+		<h1>Product Details</h1>
+	</div>
+	<table class ="table tar" border="1" cellpadding="5px">
+		<tr >
+			<th>Product Id</th>
+			<th>Name</th>
+			<th>Brand</th>
+			<th>Quantity</th>
+			<th>Price</th>
+		</tr>
+		<tr th:each="product:${plist}">
+			<td th:text="${product.pid}"></td>
+			<td th:text="${product.name}"></td>
+			<td th:text="${product.brand}"></td>
+			<td th:text="${product.quantity}"></td>
+			<td th:text="${product.price}"></td>
+		</tr>
+	</table>
+
+</body>
+</html>
