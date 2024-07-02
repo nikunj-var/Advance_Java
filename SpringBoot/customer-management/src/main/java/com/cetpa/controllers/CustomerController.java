@@ -3,6 +3,7 @@ package com.cetpa.controllers;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -29,9 +30,12 @@ public class CustomerController {
 		return "save";
 	}
 	@RequestMapping("customer-management/list")
-	public String getCustomerList(Model model) {
-		List<Customer> customerList = customerService.getList();
+	public String getCustomerList(Model model,int pn) {
+		Page<Customer> list = customerService.getList(pn);
+		List<Customer> customerList=list.toList();
 		model.addAttribute("clist",customerList);
+		model.addAttribute("pn",pn);
+		model.addAttribute("tp",list.getTotalPages());
 		return "customer-list";
 	}
 	@RequestMapping("customer-management/delete-record")

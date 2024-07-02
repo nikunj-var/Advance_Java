@@ -3,6 +3,9 @@ package com.cetpa.services.impl;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Service;
 
 import com.cetpa.entities.Customer;
@@ -20,9 +23,10 @@ public class CustomerServiceImpl implements CustomerService{
 	}
 
 	@Override
-	public List<Customer> getList() {
-		
-		return customerRepository.findAll();
+	public Page<Customer> getList(int pn) {
+		Pageable page = PageRequest.of(pn-1,3);
+		Page<Customer> list = customerRepository.findAll(page);
+		return list;
 	}
 
 	@Override

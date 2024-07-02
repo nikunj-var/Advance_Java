@@ -48,3 +48,13 @@ span{
 	border-collapse: collapse;
 	width:50%;
 }
+.lk{
+	
+	margin-right: 0.2vw;
+}
+.lka{
+	font-size: 1.2vw;
+	text-decoration: underline;
+	margin-right: 0.2vw;
+	color: teal;
+}

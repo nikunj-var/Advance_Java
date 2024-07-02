@@ -2,13 +2,15 @@ package com.cetpa.service;
 
 import java.util.List;
 
+import org.springframework.data.domain.Page;
+
 import com.cetpa.entities.Customer;
 
 public interface CustomerService {
 
 	void saveRecord(Customer customer);
 
-	List<Customer> getList();
+	Page<Customer> getList(int pn);
 
 	void deleteRecord(int cid);
 
