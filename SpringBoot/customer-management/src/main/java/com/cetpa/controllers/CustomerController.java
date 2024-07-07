@@ -7,6 +7,7 @@ import org.springframework.data.domain.Page;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.servlet.ModelAndView;
 
 import com.cetpa.entities.Customer;
 import com.cetpa.service.CustomerService;
@@ -88,5 +89,22 @@ public class CustomerController {
 		}
 		model.addAttribute("customer",customer);
 		return "show-customer";
+	}
+	
+	
+//	Customer dashboard
+	@RequestMapping("customer-management/dashboard")
+	public ModelAndView getCustomerDashboard() {
+		List<Customer> list = customerService.getList2();
+		ModelAndView mv = new ModelAndView("customer-list2");
+		mv.addObject("clist2",mv);
+		return mv;
+	}
+	
+	@RequestMapping("customer-management/search")
+	public String getCustomer(String name) {
+		List<Customer> customer = customerService.findByName(name);
+		return "";
+		
 	}
 }
